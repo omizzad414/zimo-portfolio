@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zimo Huang | Emmy Nominated Film/TV Editor</title>
+  <meta name="description" content="Portfolio for Emmy-nominated film and television editor Zimo Huang.">
+  <style>
+    :root {
+      --ink: #171411;
+      --paper: #f5efe6;
+      --paper-2: #fffaf1;
+      --line: rgba(23, 20, 17, .16);
+      --muted: #6d6258;
+      --red: #b8402b;
+      --teal: #0e6f68;
+      --gold: #b88a37;
+      --shadow: 0 22px 70px rgba(23, 20, 17, .18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-shell {
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .topbar {
+      position: fixed;
+      z-index: 20;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px clamp(18px, 4vw, 56px);
+      border-bottom: 1px solid rgba(255, 250, 241, .18);
+      background: rgba(23, 20, 17, .76);
+      color: var(--paper-2);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: grid;
+      gap: 2px;
+      min-width: 160px;
+    }
+
+    .brand strong {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    .brand span {
+      color: rgba(255, 250, 241, .7);
+      font-size: 12px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(12px, 2vw, 28px);
+      color: rgba(255, 250, 241, .78);
+      font-size: 13px;
+    }
+
+    .nav a {
+      border-bottom: 1px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .nav a:hover {
+      color: var(--paper-2);
+      border-color: var(--gold);
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      align-items: end;
+      padding: 132px clamp(18px, 5vw, 72px) 54px;
+      color: var(--paper-2);
+      background:
+        linear-gradient(120deg, rgba(14, 111, 104, .72), rgba(23, 20, 17, .86) 42%, rgba(184, 64, 43, .68)),
+        url("https://images.squarespace-cdn.com/content/v1/55877538e4b062bc4c650c18/33776d39-517f-4204-ad6b-88cc95436fac/ZIMO+Emmy+photo.jpeg?format=2500w");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      width: min(1180px, 100%);
+      display: grid;
+      gap: 34px;
+    }
+
+    .kicker {
+      color: rgba(255, 250, 241, .76);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+
+    h1 {
+      max-width: 920px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 9vw, 118px);
+      line-height: .9;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 740px;
+      color: rgba(255, 250, 241, .84);
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.45;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid rgba(255, 250, 241, .42);
+      padding: 12px 18px;
+      color: var(--paper-2);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255, 250, 241, .1);
+    }
+
+    .button.primary {
+      border-color: var(--paper-2);
+      background: var(--paper-2);
+      color: var(--ink);
+    }
+
+    .proof {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid rgba(255, 250, 241, .22);
+      margin-top: 22px;
+    }
+
+    .proof div {
+      min-height: 86px;
+      padding: 18px 18px 0 0;
+      border-right: 1px solid rgba(255, 250, 241, .16);
+    }
+
+    .proof strong {
+      display: block;
+      font-size: clamp(18px, 2vw, 26px);
+      margin-bottom: 6px;
+    }
+
+    .proof span {
+      color: rgba(255, 250, 241, .68);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    section {
+      padding: clamp(58px, 8vw, 112px) clamp(18px, 5vw, 72px);
+    }
+
+    .section-head {
+      width: min(1180px, 100%);
+      margin: 0 auto 34px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 22px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 5vw, 62px);
+      line-height: .96;
+      font-weight: 500;
+    }
+
+    .section-head p {
+      max-width: 460px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .featured {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .video-frame {
+      aspect-ratio: 16 / 9;
+      background: #0d0b09;
+      box-shadow: var(--shadow);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+    }
+
+    .feature-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+      padding: clamp(24px, 4vw, 42px);
+      background: var(--paper-2);
+      border-left: 5px solid var(--red);
+    }
+
+    .feature-copy h3,
+    .project h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 14px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .meta-list b {
+      color: var(--ink);
+    }
+
+    .project-grid {
+      width: min(1180px, 100%);
+      margin: 34px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .project {
+      display: grid;
+      gap: 16px;
+      align-content: start;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project .video-frame {
+      box-shadow: none;
+    }
+
+    .project p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .commercials {
+      background: #211914;
+      color: var(--paper-2);
+    }
+
+    .commercials .section-head {
+      border-color: rgba(255, 250, 241, .18);
+    }
+
+    .commercials .section-head p,
+    .commercials .project p {
+      color: rgba(255, 250, 241, .68);
+    }
+
+    .commercials .project {
+      border-color: rgba(255, 250, 241, .18);
+    }
+
+    .commercials .project h3 {
+      font-size: clamp(24px, 3vw, 34px);
+    }
+
+    .about {
+      background:
+        linear-gradient(90deg, var(--paper-2) 0 50%, var(--paper) 50% 100%);
+    }
+
+    .about-layout {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(260px, .7fr) minmax(0, 1fr);
+      gap: clamp(28px, 6vw, 76px);
+      align-items: start;
+    }
+
+    .portrait {
+      min-height: 520px;
+      background:
+        linear-gradient(180deg, rgba(23, 20, 17, .18), rgba(23, 20, 17, .72)),
+        url("https://images.squarespace-cdn.com/content/v1/55877538e4b062bc4c650c18/33776d39-517f-4204-ad6b-88cc95436fac/ZIMO+Emmy+photo.jpeg?format=1500w");
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+    }
+
+    .bio {
+      display: grid;
+      gap: 22px;
+    }
+
+    .bio p {
+      margin: 0;
+      color: #51473f;
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.62;
+    }
+
+    .credits {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .credit {
+      padding: 18px;
+      border-left: 3px solid var(--teal);
+      background: rgba(14, 111, 104, .08);
+    }
+
+    .credit strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .credit span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .contact {
+      background: var(--ink);
+      color: var(--paper-2);
+    }
+
+    .contact-wrap {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, .55fr);
+      gap: 40px;
+      align-items: end;
+    }
+
+    .contact h2 {
+      max-width: 820px;
+      font-size: clamp(44px, 8vw, 96px);
+    }
+
+    .contact-panel {
+      display: grid;
+      gap: 16px;
+      border-top: 1px solid rgba(255, 250, 241, .24);
+      padding-top: 22px;
+      color: rgba(255, 250, 241, .74);
+      line-height: 1.6;
+    }
+
+    .contact-panel a {
+      color: var(--paper-2);
+      font-weight: 800;
+      border-bottom: 1px solid var(--gold);
+      width: fit-content;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px clamp(18px, 5vw, 72px);
+      background: var(--ink);
+      color: rgba(255, 250, 241, .54);
+      font-size: 12px;
+      border-top: 1px solid rgba(255, 250, 241, .14);
+    }
+
+    @media (max-width: 860px) {
+      .topbar {
+        position: absolute;
+        align-items: start;
+      }
+
+      .nav {
+        justify-content: end;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        min-height: 88vh;
+        padding-top: 150px;
+      }
+
+      .proof,
+      .featured,
+      .project-grid,
+      .about-layout,
+      .contact-wrap,
+      .credits {
+        grid-template-columns: 1fr;
+      }
+
+      .proof div {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 250, 241, .14);
+      }
+
+      .section-head {
+        display: grid;
+      }
+
+      .about {
+        background: var(--paper-2);
+      }
+
+      .portrait {
+        min-height: 420px;
+      }
+
+      footer {
+        display: grid;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .topbar {
+        display: grid;
+      }
+
+      .nav {
+        justify-content: start;
+        gap: 14px;
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar" aria-label="Site navigation">
+      <a class="brand" href="#top">
+        <strong>Zimo Huang</strong>
+        <span>Film / TV Editor</span>
+      </a>
+      <nav class="nav">
+        <a href="#film-tv">Film/TV</a>
+        <a href="#commercials">Commercials</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Introduction">
+        <div class="hero-inner">
+          <div class="kicker">Emmy Nominated Film/TV Editor</div>
+          <h1>Stories shaped with rhythm, restraint, and emotional precision.</h1>
+          <p class="hero-copy">Selected work across Netflix, Apple TV+, HBO, Sundance, theatrical features, documentaries, and commercial campaigns.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#film-tv">Watch Selected Work</a>
+            <a class="button" href="mailto:zimohuang@gmail.com">Contact for Availability</a>
+          </div>
+          <div class="proof" aria-label="Career highlights">
+            <div><strong>Emmy</strong><span>Nominated for single-camera editing</span></div>
+            <div><strong>Sundance</strong><span>Official selection feature work</span></div>
+            <div><strong>Oscar</strong><span>Documentary feature recognition</span></div>
+            <div><strong>Netflix + Apple</strong><span>Premium docuseries and scripted work</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="film-tv">
+        <div class="section-head">
+          <h2>Film / TV</h2>
+          <p>A tighter edit of the portfolio: lead with the most recognizable recent credit, then support it with awards, collaborators, and distributors.</p>
+        </div>
+
+        <div class="featured">
+          <div class="video-frame">
+            <iframe src="https://player.vimeo.com/video/892712491?h=0&title=0&byline=0&portrait=0" title="Live to 100: Secrets of the Blue Zones trailer" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <article class="feature-copy">
+            <div>
+              <div class="kicker" style="color: var(--red);">Featured Credit</div>
+              <h3>Live to 100: Secrets of the Blue Zones</h3>
+            </div>
+            <div class="meta-list">
+              <span><b>Created by</b> Dan Buettner</span>
+              <span><b>Platform</b> Netflix</span>
+              <span><b>Recognition</b> 2024 Daytime Emmy nomination for Best Single Camera Editing</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-grid">
+          <article class="project">
+            <div class="video-frame">
+              <iframe src="https://player.vimeo.com/video/892732173?h=0&title=0&byline=0&portrait=0" title="The Tomorrow Man trailer" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>The Tomorrow Man</h3>
+            <p>Sundance 2019 official selection. Directed by Noble Jones. Starring John Lithgow and Blythe Danner. Distributor: Bleecker Street.</p>
+          </article>
+          <article class="project">
+            <div class="video-frame">
+              <iframe src="https://player.vimeo.com/video/892715071?h=0&title=0&byline=0&portrait=0" title="Best Foot Forward trailer" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>Best Foot Forward</h3>
+            <p>Apple TV+ series created by Josh Sundquist with 2022 Children's & Family Emmy Awards nominations.</p>
+          </article>
+          <article class="project">
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/jidafAJX25k?rel=0" title="Kevin Hart: Don't F**k This Up trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <h3>Kevin Hart: Don't F**k This Up</h3>
+            <p>Netflix docuseries created by Kevin Hart. 2020 Primetime Emmy Award nomination.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="commercials" id="commercials">
+        <div class="section-head">
+          <h2>Commercials / Promos</h2>
+          <p>Fast access to campaign work, keeping the page scannable for producers and agencies who want to feel the work before reading.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project">
+            <div class="video-frame">
+              <iframe src="https://player.vimeo.com/video/890883508?h=0&title=0&byline=0&portrait=0" title="Spielberg HBO documentary trailer" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>Spielberg</h3>
+            <p>Official trailer for the HBO original documentary.</p>
+          </article>
+          <article class="project">
+            <div class="video-frame">
+              <iframe src="https://player.vimeo.com/video/335926727?h=0&title=0&byline=0&portrait=0" title="Volkswagen Golf 7 commercial" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>Volkswagen Golf 7</h3>
+            <p>Automotive campaign film with a clean performance-forward edit.</p>
+          </article>
+          <article class="project">
+            <div class="video-frame">
+              <iframe src="https://player.vimeo.com/video/335930889?h=0&title=0&byline=0&portrait=0" title="Clinton Foundation Sabina film" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>Clinton Foundation</h3>
+            <p>Human-centered nonprofit campaign work.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="about-layout">
+          <div class="portrait" role="img" aria-label="Portrait of Zimo Huang"></div>
+          <div class="bio">
+            <div class="kicker" style="color: var(--teal);">About</div>
+            <h2>Editing for character, clarity, and momentum.</h2>
+            <p>Zimo Huang is an Emmy-nominated editor born in Beijing, raised in the United States, and based in Los Angeles. His work spans documentary features, scripted drama, sci-fi horror, docuseries, travel programming, and commercial campaigns.</p>
+            <p>Career highlights include the Academy Award-nominated documentary feature <i>Glen Campbell: I'll Be Me</i>, Sundance feature <i>The Tomorrow Man</i>, Netflix series <i>Live to 100: Secrets of the Blue Zones</i>, and a Best Editing award for <i>Days and Nights in Wuhan</i>.</p>
+            <div class="credits">
+              <div class="credit"><strong>Documentary</strong><span>Human stories, music, health, culture, and social impact.</span></div>
+              <div class="credit"><strong>Scripted</strong><span>Features and series with performance-sensitive pacing.</span></div>
+              <div class="credit"><strong>Commercial</strong><span>Promos, trailers, automotive, nonprofit, and brand films.</span></div>
+              <div class="credit"><strong>Recognition</strong><span>Emmy nomination, Oscar-recognized feature, Sundance premiere.</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-wrap">
+          <h2>Available for select film, television, and branded projects.</h2>
+          <div class="contact-panel">
+            <span>Los Angeles</span>
+            <a href="mailto:zimohuang@gmail.com">zimohuang@gmail.com</a>
+            <span>This static version can live on free hosting and keep the portfolio fast, focused, and easy to update.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Zimo Huang</span>
+      <span>Static portfolio redesign concept</span>
+    </footer>
+  </div>
+</body>
+</html>
