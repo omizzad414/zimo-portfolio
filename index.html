@@ -491,10 +491,10 @@
     .contact-panel {
       width: min(100%, 1040px);
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: minmax(0, 1fr);
       gap: clamp(28px, 8vw, 120px);
       color: var(--soft-ink);
-      font-size: clamp(15px, 1.2vw, 19px);
+      font-size: clamp(18px, 1.44vw, 22.8px); /* +20% */
       line-height: 1.55;
       text-align: center;
     }
@@ -505,9 +505,10 @@
       font-weight: 500;
     }
 
-    .wpa-logo {
-      width: clamp(180px, 20vw, 330px);
+    .ascent-logo {
+      width: clamp(240px, 30vw, 460px);
       height: auto;
+      filter: brightness(0); /* source SVG is white; render it black on the light panel */
     }
 
     .contact-row {
@@ -819,14 +820,9 @@
 
     <section class="contact" id="contact">
       <div class="section-inner">
-        <img class="wpa-logo" src="https://images.squarespace-cdn.com/content/v1/55877538e4b062bc4c650c18/1569976714479-HI024F5QZ3FT349P9KG4/wpa-logo-heading.png?format=1000w" alt="WPA logo">
+        <img class="ascent-logo" src="assets/ascent-logo.svg" alt="Ascent logo">
         <div class="contact-panel">
           <div class="contact-row">
-            <strong>For features -</strong>
-            <span>Louiza Vick || 310.659.9965 || <a href="mailto:louiza@wp-a.com">louiza@wp-a.com</a></span>
-          </div>
-          <div class="contact-row">
-            <strong>For episodic projects -</strong>
             <span>Brian J. Goldberg || 310.659.9965 || <a href="mailto:brian@wp-a.com">brian@wp-a.com</a></span>
           </div>
         </div>
